@@ -1,4 +1,4 @@
-import SidebarMenu from "../SideBarMenu/SidebarMenu"
+import SidebarMenu from "../SidebarMenu/Sidebar"
 import "./navbar.scss"
 import { motion } from "framer-motion"
 export default function NavBar() {
