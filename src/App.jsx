@@ -11,10 +11,10 @@ function App() {
         <NavBar />
         <Home />
       </section>
-      {/* <section id="Services">
+      <section id="Services">
         <Parllax type="services" />
       </section>
-      <section>Services</section> */}
+      <section>Services</section>
       <section id="Portfolio">
         <Parllax type="portfolio" />
       </section>

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function SideLinks() {
   const listItems = [
-    "Home", "Services", "Portfolio", "Contact",
+    "Home", "Services", "Skills & Education", "Projects", "Contact",
   ]
   const Itemvariants = {
     open: {

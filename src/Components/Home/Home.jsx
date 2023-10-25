@@ -40,6 +40,12 @@ export default function Home() {
     }
     return (
         <div className='Home_Main'>
+            <motion.div className='slidingTextCont'
+                initial="initial"
+                animate="animate"
+                variants={textSliderVariants}>
+                Frontend Developer and Backend Developer With Javascript
+            </motion.div>
             <div className="secondary_cont">
                 <motion.div
                     variants={textVariants}
@@ -48,19 +54,22 @@ export default function Home() {
                     <motion.h2 variants={textVariants}>KAHNU CHARAN SAHOO</motion.h2>
                     <motion.h1 variants={textVariants}>Frontend Web Developer</motion.h1>
                     <motion.div variants={textVariants} className="ctaBtns">
-                        <motion.button variants={textVariants}>My Recent Works</motion.button>
-                        <motion.button variants={textVariants} className='active_btn'>Contact Me</motion.button>
+                        <a href="#Portfolio">
+                            <motion.button  variants={textVariants}>My Recent Works</motion.button>
+                        </a>
+                        <a href="#Contact">
+                            <motion.button whileHover={{
+                                scale: 1.3,
+                                transition: { duration: .4 },
+                            }}
+                                whileTap={{ scale: 0.9 }} variants={textVariants} className='active_btn'>Contact Me</motion.button>
+                        </a>
                     </motion.div>
                     <motion.img animate="scrollBtn"
                         variants={textVariants} src="/scroll.png" alt="" />
                 </motion.div>
             </div>
-            <motion.div className='slidingTextCont'
-                initial="initial"
-                animate="animate"
-                variants={textSliderVariants}>
-                Frontend Developer and Backend Developer With Javascript
-            </motion.div>
+
             <div className="imageCont">
                 {/* <img src="/linkedin.png" alt="" /> */}
                 <img src="/developer.png" height="90%" width="100%" alt="" />
