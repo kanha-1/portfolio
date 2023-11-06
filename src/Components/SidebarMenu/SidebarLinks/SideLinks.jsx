@@ -2,8 +2,28 @@ import React from 'react'
 import { motion } from "framer-motion";
 
 export default function SideLinks() {
+  
   const listItems = [
-    "Home", "Services", "Portfolio", "Contact",
+    {
+      name:"Home",
+      value:"Home"
+    },
+    {
+      name:"Services",
+      value:"Services"
+    },
+    {
+      name:"Projects",
+      value:"Projects"
+    },
+    {
+      name:"About Me",
+      value:"AboutMe"
+    },
+    {
+      name:"Contact",
+      value:"Contact"
+    },
   ]
   const Itemvariants = {
     open: {
@@ -32,12 +52,14 @@ export default function SideLinks() {
     <motion.div className='links' variants={variants}>
       {listItems.map((items) => {
         return (
-          <motion.a href={`#${items}`}
+          <motion.a href={`#${items.value}`}
             key={items}
             variants={Itemvariants}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-          >{items}</motion.a>
+          >
+            {items.name}
+          </motion.a>
         )
       })}
     </motion.div>

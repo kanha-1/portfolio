@@ -1,4 +1,6 @@
+import AboutMe from "./Components/AboutMe/AboutMe";
 import Contact from "./Components/Contact/Contact";
+import Experiances from "./Components/Experiances/Experiances";
 import Home from "./Components/Home/Home";
 import NavBar from "./Components/NavBar/NavBar";
 import Parllax from "./Components/Parallax/Parallax";
@@ -11,15 +13,19 @@ function App() {
         <NavBar />
         <Home />
       </section>
-      {/* <section id="Services">
+      {/* service section */}
+      <section id="Services">
         <Parllax type="services" />
       </section>
-      <section>Services</section> */}
+      <Experiances/>
+      {/* projects section */}
       <section id="Portfolio">
         <Parllax type="portfolio" />
       </section>
       <Projects />
-      {/* <section id="About">About</section> */}
+      <section id="AboutMe">
+      <AboutMe/>
+      </section>
       <section id="Contact">
         <Contact />
       </section>

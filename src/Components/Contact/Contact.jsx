@@ -24,7 +24,6 @@ export default function Contact() {
     }
     const sendEmail = (e) => {
         e.preventDefault();
-        console.log(formRef.current, "jghg")
         setLoading(true)
         emailjs.sendForm('service_xek79k1', 'template_ju0gycw', formRef.current, 'J34cqEct0D_0H6X9A')
             .then((result) => {
