@@ -1,34 +1,39 @@
-import { useRef } from "react"
+import { useRef,useState } from "react"
 import "./projects.scss"
 import { motion, useScroll, useSpring, useTransform } from "framer-motion"
 const ProjectsDocs = [
     {
         id: 1,
         title: "Social Blog",
-        img: "https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        img: "/socialss.png",
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia corrupti quo ab, quas nobis, facilis temporibus minus sint debitis sit illo accusamus! Provident inventore quo placeat minus dolores architecto modi?",
-        github: "https://github.com/kanha-1"
+        github: "https://github.com/kanha-1/social-blog-MERN",
+        liveUrl: "https://social-blog-web.onrender.com",
+        techUsed:"HTML,CSS,JavaScrpt,ReactJs , NodeJs, MaterialUi,MongoDB"
     },
     {
         id: 2,
         title: "Whatsapp Web Clone",
         img: "https://images.pexels.com/photos/18522260/pexels-photo-18522260/free-photo-of-spider-on-web.jpeg?auto=compress&cs=tinysrgb&w=1600",
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia corrupti quo ab, quas nobis, facilis temporibus minus sint debitis sit illo accusamus! Provident inventore quo placeat minus dolores architecto modi?",
-        github: "https://github.com/kanha-1"
+        github: "https://github.com/kanha-1",
+        liveUrl: ""
     },
     {
         id: 3,
         title: "Google Meet Clone",
         img: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1600",
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia corrupti quo ab, quas nobis, facilis temporibus minus sint debitis sit illo accusamus! Provident inventore quo placeat minus dolores architecto modi?",
-        github: "https://github.com/kanha-1"
+        github: "https://github.com/kanha-1",
+        liveUrl: ""
     },
     {
         id: 4,
         title: "Drawing App",
         img: "https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=1600",
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia corrupti quo ab, quas nobis, facilis temporibus minus sint debitis sit illo accusamus! Provident inventore quo placeat minus dolores architecto modi?",
-        github: "https://github.com/kanha-1"
+        github: "https://github.com/kanha-1",
+        liveUrl: ""
     },
 ]
 const Single = ({ item }) => {
@@ -38,17 +43,26 @@ const Single = ({ item }) => {
         // offset: ["start start", "end start"]
     })
     const y = useTransform(scrollYProgress, [0, 1], [-150, 150]);
+
     return (
         <section>
             <div className="container">
                 <div className="wrapper">
-                    <div className="imgCont"  ref={ref}>
+                    <div className="imgCont" ref={ref}>
                         <img src={item.img} alt="" />
                     </div>
                     <motion.div className="textCont" style={{ y: y }}>
                         <h2 >{item.title}</h2>
                         <p>{item.description}</p>
-                        <button>See Demo</button>
+                        <p>Tech Used :</p>
+                        <div className="parent_btn">
+                            <a href={item.liveUrl} target="_blank">
+                                <button> <img src="/live.png" alt="live ic" /> See Demo</button>
+                            </a>
+                            <a href={item.github} target="_blank">
+                                <button><img src="/github.png" alt="GitHub" />GitHub</button>
+                            </a>
+                        </div>
                     </motion.div>
                 </div>
             </div>

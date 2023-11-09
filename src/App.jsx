@@ -6,6 +6,7 @@ import NavBar from "./Components/NavBar/NavBar";
 import Parllax from "./Components/Parallax/Parallax";
 import Projects from "./Components/Projects/Projects";
 import "./app.scss"
+
 function App() {
   return (
     <div>
@@ -13,19 +14,26 @@ function App() {
         <NavBar />
         <Home />
       </section>
-      {/* service section */}
-      <section id="Services">
+      {/* experiances section */}
+
+      {/* <section id="Services">
         <Parllax type="services" />
       </section>
-      <Experiances/>
+      <Experiances/> */}
+      
       {/* projects section */}
+
       <section id="Portfolio">
         <Parllax type="portfolio" />
       </section>
       <Projects />
-      <section id="AboutMe">
+
+      {/* about */}
+      {/* <section id="AboutMe">
       <AboutMe/>
-      </section>
+      </section> */}
+
+      {/* contact */}
       <section id="Contact">
         <Contact />
       </section>

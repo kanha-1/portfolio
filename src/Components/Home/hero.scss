@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .Home_Main {
     height: calc(100vh - 100px);
     background: linear-gradient(180deg, #0c0c1d, #111132);
@@ -9,6 +11,7 @@
         height: 100%;
         margin: auto;
         margin-top: 10%;
+
         .textCont {
             width: 50%;
             height: 100%;
@@ -16,6 +19,14 @@
             flex-direction: column;
             justify-content: center;
             gap: 40px;
+
+            @include mobile {
+                height: 50%;
+                width: 100%;
+                gap: 20px;
+                align-items: center;
+                text-align: center;
+            }
 
             h2 {
                 font-size: 30px;
@@ -25,6 +36,10 @@
 
             h1 {
                 font-size: 60px;
+
+                @include mobile {
+                    font-size: 40px;
+                }
             }
 
             .ctaBtns {
@@ -66,6 +81,19 @@
         position: absolute;
         top: 0;
         right: 0;
+
+        @include mobile {
+            height: 50%;
+            width: 100%;
+            top: unset;
+            bottom: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
     }
 
 }

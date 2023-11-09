@@ -55,7 +55,7 @@ export default function Home() {
                     <motion.h1 variants={textVariants}>Frontend Web Developer</motion.h1>
                     <motion.div variants={textVariants} className="ctaBtns">
                         <a href="#Portfolio">
-                            <motion.button  variants={textVariants}>My Recent Works</motion.button>
+                            <motion.button variants={textVariants}>My Recent Works</motion.button>
                         </a>
                         <a href="#Contact">
                             <motion.button whileHover={{
@@ -70,10 +70,14 @@ export default function Home() {
                 </motion.div>
             </div>
 
-            <div className="imageCont">
+            <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+                className="imageCont">
                 {/* <img src="/linkedin.png" alt="" /> */}
                 <img src="/developer.png" height="90%" width="100%" alt="" />
-            </div>
+            </motion.div>
         </div>
     )
 }
