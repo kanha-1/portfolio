@@ -14,7 +14,7 @@ export default function SideLinks() {
     },
     {
       name:"Projects",
-      value:"Projects"
+      value:"Portfolio"
     },
     {
       name:"About Me",
