@@ -19,22 +19,22 @@ const ProjectsDocs = [
         github: "https://github.com/kanha-1",
         liveUrl: ""
     },
-    {
-        id: 3,
-        title: "Google Meet Clone",
-        img: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia corrupti quo ab, quas nobis, facilis temporibus minus sint debitis sit illo accusamus! Provident inventore quo placeat minus dolores architecto modi?",
-        github: "https://github.com/kanha-1",
-        liveUrl: ""
-    },
-    {
-        id: 4,
-        title: "Drawing App",
-        img: "https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia corrupti quo ab, quas nobis, facilis temporibus minus sint debitis sit illo accusamus! Provident inventore quo placeat minus dolores architecto modi?",
-        github: "https://github.com/kanha-1",
-        liveUrl: ""
-    },
+    // {
+    //     id: 3,
+    //     title: "Google Meet Clone",
+    //     img: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    //     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia corrupti quo ab, quas nobis, facilis temporibus minus sint debitis sit illo accusamus! Provident inventore quo placeat minus dolores architecto modi?",
+    //     github: "https://github.com/kanha-1",
+    //     liveUrl: ""
+    // },
+    // {
+    //     id: 4,
+    //     title: "Drawing App",
+    //     img: "https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    //     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia corrupti quo ab, quas nobis, facilis temporibus minus sint debitis sit illo accusamus! Provident inventore quo placeat minus dolores architecto modi?",
+    //     github: "https://github.com/kanha-1",
+    //     liveUrl: ""
+    // },
 ]
 const Single = ({ item }) => {
     const ref = useRef()
