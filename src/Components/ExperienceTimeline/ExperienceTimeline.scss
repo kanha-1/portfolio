@@ -1,0 +1,227 @@
+@import "../../app.scss"; // Assuming your global styles/variables are here
+
+.experience-section {
+    position: relative;
+    padding: 50px 20px;
+    background: linear-gradient(180deg, #0c0c1d, #111132); // Similar to home
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .progress-header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 30px;
+        text-align: center;
+        background: linear-gradient(180deg, #0c0c1d, #111132);
+        z-index: 10;
+        @include mobile {
+            padding-top: 30px;
+            padding-bottom: 20px;
+        }
+
+        .progressBar {
+            height: 10px;
+            background-color: #fff;
+            margin-top: 20px;
+        }
+    }
+
+    h2 {
+        font-size: 48px;
+        margin-bottom: 0;
+        text-align: center;
+        color: orange; // Consistent with projects heading
+        @include mobile {
+            font-size: 36px;
+        }
+    }
+
+    .timeline-container {
+        position: relative;
+        max-width: 900px;
+        width: 100%;
+
+        // The central timeline line
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #555;
+            transform: translateX(-50%);
+            border-radius: 2px;
+
+            @include mobile {
+                left: 20px; // Shift line to the left for mobile, cards will be on one side
+            }
+        }
+    }
+
+    .timeline-item {
+        padding: 20px;
+        margin-bottom: 30px;
+        position: relative;
+        width: calc(50% - 40px); // Adjust width for spacing around the central line
+        background-color: #1a1a3d; // Darker card background
+        border: 1px solid #2a2a50;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+        // Alternating sides for desktop
+        &:nth-child(odd) {
+            left: 0;
+            padding-left: 30px; // Extra padding for the "dot" side
+            @include mobile {
+                width: calc(100% - 50px); // Full width minus line offset and padding
+                left: 40px; // Position to the right of the line
+                padding-left: 20px;
+            }
+        }
+
+        &:nth-child(even) {
+            left: calc(50% + 40px); // Position to the right of the central line
+            padding-left: 30px;
+             @include mobile {
+                width: calc(100% - 50px); // Full width minus line offset and padding
+                left: 40px; // Position to the right of the line
+                padding-left: 20px;
+            }
+        }
+        
+        // Clearfix for potential float issues if any were used (though flex is primary here)
+        &::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        // The dot on the timeline
+        &::before {
+            content: '';
+            position: absolute;
+            top: 20px; 
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: orange;
+            border: 3px solid #0c0c1d;
+            z-index: 1;
+        }
+
+        &:nth-child(odd)::before {
+            right: -8px; // Position dot on the central line (half of its width)
+            transform: translateX(calc(50% - 20px - 40px)); // Adjust based on padding and line position
+             @include mobile {
+                left: -28px; // Adjust for mobile line position
+                transform: none;
+                top: 25px;
+            }
+        }
+
+        &:nth-child(even)::before {
+            left: -8px; // Position dot on the central line
+            transform: translateX(calc(-50% + 20px + 40px));
+            @include mobile {
+                left: -28px; // Adjust for mobile line position
+                transform: none;
+                top: 25px;
+            }
+        }
+    }
+
+    .timeline-content {
+        h3 {
+            font-size: 24px;
+            color: lightgray;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            a {
+                color: lightgray;
+                text-decoration: none;
+                font-weight: normal;
+                font-size: 0.9em;
+                margin-left: 5px;
+                &:hover {
+                    color: orange;
+                    text-decoration: underline;
+                }
+            }
+            @include mobile {
+                font-size: 20px;
+            }
+        }
+
+        .dates-location {
+            font-size: 14px;
+            color: #aaa;
+            margin-bottom: 15px;
+            font-style: italic;
+            @include mobile {
+                font-size: 12px;
+            }
+        }
+
+        .points {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 15px;
+
+            li {
+                font-size: 16px;
+                color: #ccc;
+                line-height: 1.6;
+                margin-bottom: 8px;
+                position: relative;
+                padding-left: 20px;
+
+                &::before {
+                    content: "▹"; // Arrow or bullet
+                    position: absolute;
+                    left: 0;
+                    color: orange; 
+                }
+                @include mobile {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .technologies-used {
+            margin-top: 15px;
+            strong {
+                font-size: 16px;
+                color: lightgray;
+                margin-bottom: 5px;
+                display: block;
+            }
+            .tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-top: 5px;
+
+                .tag {
+                    background-color: #2a2a50;
+                    color: #ddd;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    font-size: 12px;
+                    @include mobile {
+                        font-size: 10px;
+                        padding: 4px 8px;
+                    }
+                }
+            }
+        }
+    }
+}
