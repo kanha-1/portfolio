@@ -8,7 +8,7 @@ const experiencesData = [
         title: "Software Engineer",
         company: "Incture Technology",
         companyUrl: "", // Add URL if available
-        dates: "Nov 2024 - Present", // As provided by user, verify if it's a future date or typo
+        dates: "Nov 2024 - Present",
         location: "Bengaluru, India",
         points: [
             "Leading frontend team for SAP S2P business onboarding applications, ensuring high-quality standards.",
@@ -22,7 +22,7 @@ const experiencesData = [
         id: 2,
         title: "Lead Developer",
         company: "Tecnotree Convergence Private Limited",
-        companyUrl: "", // Add URL if available
+        companyUrl: "",
         dates: "Aug 2022 - Nov 2024",
         location: "Bengaluru, India",
         points: [
@@ -31,13 +31,13 @@ const experiencesData = [
             "Improved development efficiency by configuring Webpack and implementing light/dark theming.",
             "Reduced bugs by 20% through code refactoring."
         ],
-        technologies: ["React", "Webpack", "JavaScript"] // Add more specific ones if applicable
+        technologies: ["React", "Webpack", "JavaScript"]
     },
     {
         id: 3,
         title: "Software Engineer",
         company: "Emproto Technology Private Limited",
-        companyUrl: "", // Add URL if available
+        companyUrl: "",
         dates: "June 2021 - July 2022",
         location: "Bengaluru, India",
         points: [
@@ -45,20 +45,20 @@ const experiencesData = [
             "Admin Platform: Created a dynamic admin interface allowing users to configure all aspects of the customer site, including header, navbar, image groups, and CTA colors. Led the team in fixing major bugs and enhancing functionality, ensuring a robust and user-friendly admin experience.",
             "Customer Platform: Architected and developed the customer-facing e-commerce application, focusing on dynamic content with minimal CSS. Implemented Progressive Web App (PWA) capabilities, ensuring responsiveness across laptops, and mobile devices with distinct designs."
         ],
-        technologies: ["React", "PWA", "JavaScript"] // Add more
+        technologies: ["React", "PWA", "JavaScript"]
     },
     {
         id: 4,
         title: "Frontend Developer",
         company: "Solytics Partner",
-        companyUrl: "", // Add URL if available
+        companyUrl: "",
         dates: "Dec 2020 - June 2021",
         location: "Pune, India",
         points: [
             "Developed the Jupiter Book module to automate Python scripts, enhancing platform interactivity.",
             "Refactored product from static CSS to Material-UI design, reducing page load time by 18%."
         ],
-        technologies: ["Python", "Material-UI", "JavaScript"] // Add more
+        technologies: ["Python", "Material-UI", "JavaScript"]
     }
 ];
 
@@ -80,7 +80,7 @@ const ExperienceTimeline = () => {
             opacity: 1,
             y: 0,
             transition: {
-                delay: i * 0.2, // Stagger animation
+                delay: i * 0.2,
                 duration: 0.5,
             },
         }),
@@ -108,7 +108,7 @@ const ExperienceTimeline = () => {
                         variants={itemVariants}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, amount: 0.3 }} // Trigger when 30% of item is visible
+                        viewport={{ once: true, amount: 0.3 }}
                     >
                         <div className="timeline-content">
                             <h3>

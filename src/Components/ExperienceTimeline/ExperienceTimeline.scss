@@ -106,7 +106,7 @@
         &::before {
             content: '';
             position: absolute;
-            top: 20px; 
+            top: 20px;
             width: 16px;
             height: 16px;
             border-radius: 50%;
@@ -188,7 +188,7 @@
                     content: "▹"; // Arrow or bullet
                     position: absolute;
                     left: 0;
-                    color: orange; 
+                    color: orange;
                 }
                 @include mobile {
                     font-size: 14px;

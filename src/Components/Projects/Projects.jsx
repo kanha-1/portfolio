@@ -1,4 +1,4 @@
-import { useRef,useState } from "react"
+import { useRef } from "react"
 import "./projects.scss"
 import { motion, useScroll, useSpring, useTransform } from "framer-motion"
 const ProjectsDocs = [
@@ -9,7 +9,7 @@ const ProjectsDocs = [
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia corrupti quo ab, quas nobis, facilis temporibus minus sint debitis sit illo accusamus! Provident inventore quo placeat minus dolores architecto modi?",
         github: "https://github.com/kanha-1/social-blog-MERN",
         liveUrl: "https://social-blog-web.onrender.com",
-        techUsed:"HTML,CSS,JavaScrpt,ReactJs , NodeJs, MaterialUi,MongoDB"
+        techUsed: "HTML,CSS,JavaScrpt,ReactJs , NodeJs, MaterialUi,MongoDB"
     },
     {
         id: 2,
@@ -61,7 +61,7 @@ const Single = ({ item }) => {
                         <div className="parent_btn">
                             {item.liveUrl ? (
                                 <a href={item.liveUrl} target="_blank" rel="noopener noreferrer">
-                                    <button> <img src="/live.png" alt="" /> See Demo</button> 
+                                    <button> <img src="/live.png" alt="" /> See Demo</button>
                                 </a>
                             ) : (
                                 <button disabled> <img src="/live.png" alt="" /> See Demo</button>
