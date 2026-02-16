@@ -66,7 +66,7 @@ export default function Home() {
                         </a>
                     </motion.div>
                     <motion.img animate="scrollBtn"
-                        variants={textVariants} src="/scroll.png" alt="" />
+                        variants={textVariants} src="/scroll.png" alt="Scroll down arrow" />
                 </motion.div>
             </div>
 
@@ -76,7 +76,7 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 className="imageCont">
                 {/* <img src="/linkedin.png" alt="" /> */}
-                <img src="/developer.png" height="90%" width="100%" alt="" />
+                <img src="/developer.png" height="90%" width="100%" alt="Illustration of a developer working at a computer" />
             </motion.div>
         </div>
     )

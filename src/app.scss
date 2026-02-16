@@ -39,6 +39,12 @@ section {
     scroll-snap-align: center;
 }
 
+// Override for Experience section to allow content expansion
+#Experience.experience-wrapper {
+    height: auto;
+    min-height: 100vh;
+}
+
 @mixin mobile {
     @media (max-width: 738px) {
         @content;
